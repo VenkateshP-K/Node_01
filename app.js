@@ -24,6 +24,7 @@ app.get('/createfile', (req, res) => {
     res.status(500).send('Error');
   }
 });
+app.use(express.static('public'))
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

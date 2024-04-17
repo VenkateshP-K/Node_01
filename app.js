@@ -24,6 +24,9 @@ app.get('/createfile', (req, res) => {
     res.status(500).send('Error');
   }
 });
+app.get('/', (req, res) => {
+  res.send('Hello, Render!'); 
+});
 app.use(express.static('public'))
 
 app.listen(PORT, () => {
